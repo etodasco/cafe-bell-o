@@ -1,1 +1,13 @@
-<h1>Menu</h1>
+<div class="text-center">
+    <h1>Menu</h1>
+</div>
+
+<% @menu_items.each do |menu_item| %>
+    <div>
+        <h2><%= menu_item.category %></h2>
+        <h3><%= menu_item.name %></h3>
+        <h3>Ingredients:</h3>
+            <h3><%= menu_item.description %></h3>
+        <h3>$<%= menu_item.price %></h3>
+    </div>
+<% end %>

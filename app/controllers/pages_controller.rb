@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
-  def home
+  def menu
+    @menu_items = MenuItem.all
   end
 end
