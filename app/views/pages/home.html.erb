@@ -37,7 +37,7 @@
         <div class="card shadow-sm">
           <div class="card-body">
             <h5 class="text-muted text-center">
-              <%= I18n.l(Time.current, format: :long).capitalize %>
+              <%= I18n.l(Time.current, format: :long).split.map(&:capitalize).join(' ') %>
               <p> Spécial du jour </p>
             </h5>
 

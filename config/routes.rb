@@ -1,18 +1,16 @@
 Rails.application.routes.draw do
-  get "pages/home"
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  # Devise routes for user authentication
+  devise_for :users
 
-  # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
-  # Can be used by load balancers and uptime monitors to verify that the app is live.
-  get "up" => "rails/health#show", as: :rails_health_check
+  # Admin routes within the 'admin' namespace
+  namespace :admin do
+    resources :menu_items # Admin management of menu items
+    resources :users      # Admin management of users (if needed)
+    root to: "dashboard#home" # Admin dashboard root
+  end
 
-  # Render dynamic PWA files from app/views/pwa/* (remember to link manifest in application.html.erb)
-  # get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
-  # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
-
-  # Defines the root path route ("/")
-  root "pages#home"
-
+  # Main pages (e.g., home, about, contact)
+  root "pages#home" # This is the root route for the public site
   get 'about', to: 'pages#about'
   get 'menu', to: 'pages#menu'
   get 'contact', to: 'pages#contact'

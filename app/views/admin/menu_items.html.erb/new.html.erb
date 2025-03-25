@@ -1,0 +1,51 @@
+<!-- app/views/admin/menu_items/new.html.erb -->
+<h1>New Menu Item</h1>
+
+<%= form_with model: @menu_item, url: admin_menu_items_path, local: true do |f| %>
+  <% if @menu_item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@menu_item.errors.count, "error") %> prohibited this menu item from being saved:</h2>
+      <ul>
+        <% @menu_item.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :price %>
+    <%= f.number_field :price %>
+  </div>
+
+  <div class="field">
+    <%= f.label :day %>
+    <%= f.text_field :day %>
+  </div>
+
+  <div class="field">
+    <%= f.label :category %>
+    <%= f.text_field :category %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Create Menu Item" %>
+  </div>
+<% end %>
+
+<%= link_to 'Back to Menu Items', admin_menu_items_path %>
