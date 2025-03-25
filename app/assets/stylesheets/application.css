@@ -24,3 +24,38 @@
     object-fit: cover; /* Ensures the image covers the container without distortion */
     object-position: 50% 50%;
   }
+
+  /*Shop images*/
+  .cafe-img {
+    width: 100%; /* Makes images fill the column width */
+    height: 250px; /* Set a fixed height to ensure equal size */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    margin-bottom: 0; /* Remove any bottom margin that might cause space between images */
+}
+
+.row {
+    margin-right: 1;
+    margin-left: 1; /* Remove gutter space between columns */
+}
+
+.col-md-3 {
+    padding-right: 0;
+    padding-left: 0; /* Remove padding in columns to make images almost touch */
+}
+
+  /* Navigation Icons */
+.nav i {
+  font-size: 24px; /* Adjust icon size */
+  color: #6c757d; /* Bootstrap default text color */
+  transition: color 0.3s ease-in-out;
+}
+
+.nav a:hover i {
+  color: #000000; /* Bootstrap primary color on hover */
+}
+  footer {
+    width: 100%;
+    border-top: 1px solid #ddd;
+    background-color: white; /* Adjust as needed */
+    padding: 10px 0;
+  }
