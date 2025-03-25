@@ -1,0 +1,33 @@
+fr-CA:
+  date:
+    day_names:
+      - "dimanche"
+      - "lundi"
+      - "mardi"
+      - "mercredi"
+      - "jeudi"
+      - "vendredi"
+      - "samedi"
+    month_names:
+      - "janvier"
+      - "février"
+      - "mars"
+      - "avril"
+      - "mai"
+      - "juin"
+      - "juillet"
+      - "août"
+      - "septembre"
+      - "octobre"
+      - "novembre"
+      - "décembre"
+    formats:
+      long: "%A, %d %B %Y"  # Full date format, e.g., "lundi, 25 mars 2025"
+      short: "%d %b %Y"     # Short date format, e.g., "25 mar 2025"
+
+  time:
+    formats:
+      long: "%A, %d %B %Y"  # Same long format for time
+      short: "%d %b %Y"     # Short format for time
+
+

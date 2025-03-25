@@ -29,15 +29,30 @@
   </div>
 </div>
 
-<div class="mt-2 mb-2">
-  <h2><p class="text-center"><%= Time.current.strftime('%A') %>'s Special </p></h2>
+<%# Todays special %>
+<div class="album py-5 bg-body-tertiary">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-6">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="text-muted text-center">
+              <%= I18n.l(Time.current, format: :long).capitalize %>
+              <p> Spécial du jour </p>
+            </h5>
 
-  <% if @menu_item_for_today.present? %>
-    <p class="text-center"><%= @menu_item_for_today.name %></p>
-    <p class="text-center"><%= @menu_item_for_today.description %></p>
-  <% else %>
-    <p class="text-center">No special available for today.</p>
-  <% end %>
+            <% if @menu_item_for_today.present? %>
+              <h6 class="card-title text-center"><%= @menu_item_for_today.name %></h6>
+              <p class="card-text text-center"><%= @menu_item_for_today.description %></p>
+              <h6 class="text-danger fw-bold text-center">$<%= @menu_item_for_today.price %></h6>
+            <% else %>
+              <p class="text-center">Pas de special pour aujhour'dui.</p>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="container mt-4">
