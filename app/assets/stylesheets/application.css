@@ -43,6 +43,23 @@
     padding-left: 0; /* Remove padding in columns to make images almost touch */
 }
 
+.sandwich {
+  width: 100%;  /* Ensures full width */
+  height: 300px; /* Set a fixed height */
+  object-fit: cover; /* Prevents distortion */
+  display: flex;  /* Enables flexbox */
+  align-items: center; /* Centers image vertically */
+  justify-content: center; /* Centers image horizontally */
+}
+
+.carousel-control-prev {
+  left: -60px; /* Moves the left arrow further out */
+}
+
+.carousel-control-next {
+  right: -60px; /* Moves the right arrow further out */
+}
+
   /* Navigation Icons */
 .nav i {
   font-size: 24px; /* Adjust icon size */
