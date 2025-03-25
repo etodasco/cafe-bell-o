@@ -30,4 +30,12 @@ fr-CA:
       long: "%A, %d %B %Y"  # Same long format for time
       short: "%d %b %Y"     # Short format for time
 
-
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            password:
+              too_short: "Le mot de passe est trop court (minimum 6 caractères)"
+      messages:
+        not_saved: "Impossible d'enregistrer l'objet"

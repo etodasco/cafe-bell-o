@@ -9,9 +9,11 @@ Rails.application.routes.draw do
     root to: "dashboard#home" # Admin dashboard root
   end
 
-  # Main pages (e.g., home, about, contact)
-  root "pages#home" # This is the root route for the public site
+  # Public pages (home, about, menu, contact)
+  root to: 'pages#home'  # This is the root route for the public site
   get 'about', to: 'pages#about'
   get 'menu', to: 'pages#menu'
   get 'contact', to: 'pages#contact'
 end
+
+
