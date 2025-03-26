@@ -25,7 +25,11 @@
 
   <body class="d-flex flex-column min-vh-100"> <%# Ensures full viewport height %>
 
+
     <%= render "layouts/navbar" %>
+
+    <p class="notice"><%= notice %></p> 
+    <p class="alert"><%= alert %></p>
 
     <main class="flex-grow-1">
       <%= yield %> <%# This ensures content takes up remaining space %>
