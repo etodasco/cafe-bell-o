@@ -25,7 +25,7 @@
         <td><%= item.name %></td>
         <td><%= item.description %></td>
         <td><%= item.day %></td>
-        <td><%= item.price %></td>
+        <td>$<%= item.price %></td>
         <td>
           <%= link_to 'Montrer', menu_item_path(item), class: 'btn btn-info' %>
           <%= link_to 'Modifier', edit_menu_item_path(item), class: 'btn btn-warning' %>

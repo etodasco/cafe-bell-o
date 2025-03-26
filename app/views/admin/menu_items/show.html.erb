@@ -9,9 +9,9 @@
       <p class="card-text"><strong>Day:</strong> <%= @menu_item.day %></p>
 
       <div class="d-flex flex-column">
-        <%= link_to "Back to Menu Items", admin_menu_items_path, class: 'btn btn-secondary w-100 mb-2' %>
-        <%= button_to "Delete Menu Item", 
-              admin_menu_item_path(@menu_item), 
+        <%= link_to "Back to Menu Items", menu_items_path, class: 'btn btn-secondary w-100 mb-2' %>
+        <%= link_to "View Menu Item", menu_item_path(@menu_item), class: 'btn btn-primary w-100 mb-2' %>
+        <%= button_to "Delete Menu Item", menu_item_path(@menu_item), 
               method: :delete, 
               data: { confirm: "Are you sure you want to delete this item?" }, 
               class: "btn btn-danger w-100" %>
