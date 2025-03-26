@@ -38,6 +38,23 @@
         </div>
       <% end %>
     </div>
-    
+
+    <!-- Desserts Menu Section -->
+    <h2 class="mt-5 mb-4">Desserts</h2>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <% @menu_items.where(category: 'Dessert').each do |menu_item| %>
+        <div class="col">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="text-muted"><%= menu_item.category %></h5>
+              <h6 class="card-title"><%= menu_item.name %></h6>
+              <p class="card-text"><%= menu_item.description %></p>
+              <h6 class="text-danger fw-bold">$<%= menu_item.price %></h6>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
   </div>
 </div>
