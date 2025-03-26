@@ -1,6 +1,8 @@
-<%# <div class="text-center">
-    <h1>Accueille</h1>
-</div> %>
+<% if user_signed_in? %>
+  <div class="text-end mt-2 me-2">
+    <p>Connecté: <%= current_user.email %></p>
+  </div>
+<% end %>
 
 <div class="banner">
   <%= image_tag "cafe bello banner.jpg", alt: "Sandwich Shop" %>

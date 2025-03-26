@@ -1,3 +1,7 @@
 class MenuItem < ApplicationRecord
-  validates :day, presence: true, inclusion: { in: %w(Sunday Monday Tuesday Wednesday Thursday Friday Saturday), message: "%{value} is not a valid day" }
+  validates :name, presence: true
+  validates :description, presence: true
+  validates :price, presence: true
+  validates :category, presence: true
+  validates :day, presence: true
 end

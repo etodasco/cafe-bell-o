@@ -5,6 +5,10 @@ fr-CA:
       not_saved:
         one: "Un problème est survenu, l'enregistrement n'a pas pu être effectué"
   devise:
+    failure:
+      user:
+        not_found_in_database: "Aucun utilisateur trouvé avec ces identifiants"
+        admin_only: "Seul l'administrateur peut se connecter."  # Add this line
     sessions:
       user:
         signed_in: 'Vous êtes connecté avec succès.'

@@ -1,7 +1,5 @@
-# app/controllers/admin/menu_items_controller.rb
-class Admin::MenuItemsController < ApplicationController
-  before_action :authenticate_user!
-  before_action :check_admin
+class Admin::MenuItemsController < Admin::BaseController
+  before_action :find_menu_item, only: [:edit, :update, :destroy, :show]
 
   def index
     @menu_items = MenuItem.all
@@ -13,40 +11,45 @@ class Admin::MenuItemsController < ApplicationController
 
   def create
     @menu_item = MenuItem.new(menu_item_params)
+
     if @menu_item.save
-      redirect_to admin_menu_items_path, notice: "Menu item created successfully."
+      redirect_to admin_menu_items_path, notice: "Menu item added successfully."
     else
-      render :new
+      render :new, alert: "There was an error adding the menu item."
     end
   end
 
   def edit
-    @menu_item = MenuItem.find(params[:id])
+    # This action will render the edit form
+  end
+
+  def show
+    # Automatically renders app/views/admin/menu_items/show.html.erb
   end
 
   def update
-    @menu_item = MenuItem.find(params[:id])
     if @menu_item.update(menu_item_params)
       redirect_to admin_menu_items_path, notice: "Menu item updated successfully."
     else
-      render :edit
+      render :edit, alert: "There was an error updating the menu item."
     end
   end
 
   def destroy
-    @menu_item = MenuItem.find(params[:id])
-    @menu_item.destroy
-    redirect_to admin_menu_items_path, notice: "Menu item deleted successfully."
+    if @menu_item.destroy
+      redirect_to admin_menu_items_path, notice: "Menu item deleted successfully."
+    else
+      redirect_to admin_menu_items_path, alert: "There was an error deleting the menu item."
+    end
   end
 
   private
 
-  def menu_item_params
-    params.require(:menu_item).permit(:name, :description, :price, :day, :category, :image)
+  def find_menu_item
+    @menu_item = MenuItem.find(params[:id])
   end
 
-  def check_admin
-    # Ensure the user is an admin
-    redirect_to root_path unless current_user.admin?
+  def menu_item_params
+    params.require(:menu_item).permit(:name, :description, :price, :category, :day)
   end
 end

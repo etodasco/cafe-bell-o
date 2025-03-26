@@ -1,19 +1,15 @@
 Rails.application.routes.draw do
-  # Devise routes for user authentication
   devise_for :users
 
   # Admin routes within the 'admin' namespace
   namespace :admin do
-    resources :menu_items # Admin management of menu items
-    resources :users      # Admin management of users (if needed)
-    root to: "dashboard#home" # Admin dashboard root
+    resources :menu_items, only: [:index, :new, :create, :edit, :show, :update, :destroy]
+    root to: "dashboard#home"  # This defines the root path for the admin dashboard
   end
 
   # Public pages (home, about, menu, contact)
-  root to: 'pages#home'  # This is the root route for the public site
+  root to: 'pages#home'
   get 'about', to: 'pages#about'
   get 'menu', to: 'pages#menu'
   get 'contact', to: 'pages#contact'
 end
-
-
