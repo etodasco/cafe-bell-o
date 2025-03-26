@@ -1,5 +1,5 @@
 <div class="text-center mt-2 mb-4">
-  <h1>Create New Menu Item</h1>
+  <h1>Créer un nouvel élément de menu</h1>
 </div>
 
 <div class="card shadow-sm mb-4" style="max-width: 600px; margin: auto;">
@@ -17,7 +17,12 @@
       <% end %>
 
       <div class="form-group mb-3">
-        <%= f.label :name, class: "form-label" %>
+        <%= f.label :category, class: "form-label" %>
+        <%= f.text_field :category, class: "form-control" %>
+      </div>
+
+      <div class="form-group mb-3">
+        <%= f.label :noms, class: "form-label" %>
         <%= f.text_field :name, class: "form-control" %>
       </div>
 
@@ -27,18 +32,13 @@
       </div>
 
       <div class="form-group mb-3">
-        <%= f.label :price, class: "form-label" %>
-        <%= f.number_field :price, class: "form-control" %>
+        <%= f.label :prix, class: "form-label" %>
+        <%= f.number_field :price, step: 0.01, class: "form-control" %>
       </div>
 
       <div class="form-group mb-3">
-        <%= f.label :day, class: "form-label" %>
+        <%= f.label :jour, class: "form-label" %>
         <%= f.text_field :day, class: "form-control" %>
-      </div>
-
-      <div class="form-group mb-3">
-        <%= f.label :category, class: "form-label" %>
-        <%= f.text_field :category, class: "form-control" %>
       </div>
 
       <div class="form-group mb-3">
