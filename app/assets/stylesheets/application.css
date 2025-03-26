@@ -9,6 +9,50 @@
  * Consider organizing styles into separate files for maintainability.
  */
 
+  /* Custom styles for flash messages */
+/* Custom styles for flash messages */
+/* Custom styles for flash messages */
+/* Custom styles for flash messages */
+/* Custom styles for flash messages */
+/* Custom styles for flash messages */
+.custom-alert {
+  border: 2px solid #007bff; /* Blue border */
+  background-color: #e7f3fe; /* Light blue background */
+  color: #0056b3; /* Blue text color */
+  border-radius: 5px; /* Rounded corners */
+  padding: 12px 12px; /* Padding for the box */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow with reduced size */
+  font-size: 14px; /* Smaller font size */
+  max-width: 350px; /* Optional: limit the width */
+  margin: 10px auto; /* Center the box and add space around it */
+  position: relative; /* Position relative for the button */
+}
+
+/* Custom styles for the close button */
+.custom-alert .btn-close {
+  position: absolute; /* Position absolutely within the alert */
+  top: 13px; /* Align to the top */
+  right: 10px; /* Align to the right */
+  border: none; /* Remove border */
+  color: #0056b3; /* Blue text color */
+  font-size: 18px; /* Adjust size of the 'X' */
+  cursor: pointer; /* Change cursor to pointer */
+  padding: 0; /* Remove any default padding */
+  margin: 0; /* Remove any margin */
+}
+
+.custom-alert .btn-close:hover {
+  color: #ffffff; /* Darker color on hover */
+}
+
+/* Bootstrap default .btn-close style override */
+.custom-alert .btn-close {
+  font-family: 'Helvetica', sans-serif; /* Ensure proper font styling */
+  font-weight: bold; /* Make the button text bolder */
+  color: #ffffff;
+}
+
+
  .banner {
     width: 100%;
     height: 400px; /* Fixed height */

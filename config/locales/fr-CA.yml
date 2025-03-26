@@ -1,4 +1,14 @@
 fr-CA:
+  errors:
+    messages:
+      taken: "est déjà pris"
+      not_saved:
+        one: "Un problème est survenu, l'enregistrement n'a pas pu être effectué"
+  devise:
+    sessions:
+      user:
+        signed_in: 'Vous êtes connecté avec succès.'
+        signed_out: 'Vous êtes déconnecté avec succès.'  # Add this line
   date:
     day_names:
       - "Dimanche"

@@ -28,8 +28,15 @@
 
     <%= render "layouts/navbar" %>
 
-    <p class="notice"><%= notice %></p> 
-    <p class="alert"><%= alert %></p>
+    <div class="text-center mt-0 mb-0" id="flash-messages">
+      <% flash.each do |type, message| %>
+        <div class="alert alert-<%= type %> alert-dismissible fade show custom-alert" role="alert">
+          <%= message %>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      <% end %>
+    </div>
+
 
     <main class="flex-grow-1">
       <%= yield %> <%# This ensures content takes up remaining space %>
