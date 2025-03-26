@@ -3,23 +3,27 @@ class Admin::MenuItemsController < Admin::BaseController
     @menu_item = MenuItem.new(menu_item_params)
 
     if @menu_item.save
-      redirect_to admin_root_path, notice: "Menu item added successfully."  # Updated redirect path
+      redirect_to admin_menu_items_path, notice: "Menu item added successfully." # Updated redirect path
     else
-      redirect_to admin_root_path, alert: "There was an error adding the menu item."
+      render :new, alert: "There was an error adding the menu item." # Render new action with alert
     end
   end
 
   def show
-    @menu_item = MenuItem.find(params[:id])  # Find the menu item by ID
+    @menu_item = MenuItem.find_by(id: params[:id])  # Safely find the menu item by ID
+
+    if @menu_item.nil?
+      redirect_to admin_menu_items_path, alert: "Menu item not found."
+    end
   end
 
   def destroy
-    @menu_item = MenuItem.find(params[:id])
+    @menu_item = MenuItem.find_by(id: params[:id])  # Safely find the menu item by ID
 
-    if @menu_item.destroy
-      redirect_to admin_root_path, notice: "Menu item deleted successfully."
+    if @menu_item&.destroy
+      redirect_to admin_menu_items_path, notice: "Menu item deleted successfully."
     else
-      redirect_to admin_root_path, alert: "There was an error deleting the menu item."
+      redirect_to admin_menu_items_path, alert: "There was an error deleting the menu item."
     end
   end
 
