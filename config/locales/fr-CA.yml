@@ -51,5 +51,15 @@ fr-CA:
           attributes:
             password:
               too_short: "Le mot de passe est trop court (minimum 6 caractères)"
+        menu_item:
+          attributes:
+            name:
+              blank: "Le nom ne peut pas être vide."
+            description:
+              blank: "La description ne peut pas être vide."
+            price:
+              blank: "Le prix ne peut pas être vide."
+            category:
+              blank: "La catégorie ne peut pas être vide."
       messages:
         not_saved: "Impossible d'enregistrer l'objet"

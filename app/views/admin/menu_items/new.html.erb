@@ -4,7 +4,7 @@
 
 <div class="card shadow-sm mb-4" style="max-width: 600px; margin: auto;">
   <div class="card-body">
-    <%= form_with model: @menu_item, url: admin_menu_items_path, local: true do |f| %>
+    <%= form_with model: @menu_item, url: menu_items_path, local: true do |f| %>
       <% if @menu_item.errors.any? %>
         <div id="error_explanation" class="alert alert-danger">
           <h2><%= pluralize(@menu_item.errors.count, "error") %> prohibited this menu item from being saved:</h2>
@@ -52,7 +52,7 @@
     <% end %>
 
     <div class="form-group">
-      <%= link_to 'Back to Menu Items', admin_menu_items_path, class: "btn btn-secondary w-100" %>
+      <%= link_to 'Back to Menu Items', menu_items_path, class: "btn btn-secondary w-100" %>
     </div>
   </div>
 </div>

@@ -4,7 +4,7 @@
 </div>
 
 <div class="text-end me-2">
-  <%= link_to 'Ajouter un élément de menu', new_admin_menu_item_path, class: 'btn btn-success mb-3' %>
+  <%= link_to 'Ajouter un élément de menu', new_menu_item_path, class: 'btn btn-success mb-3' %>
 </div>
 
 <table class="table text-center">
@@ -27,9 +27,9 @@
         <td><%= item.day %></td>
         <td><%= item.price %></td>
         <td>
-          <%= link_to 'Montrer', admin_menu_item_path(item), class: 'btn btn-info' %>
-          <%= link_to 'Modifier', edit_admin_menu_item_path(item), class: 'btn btn-warning' %>
-          <%= link_to 'Supprimer', admin_menu_item_path(item), method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure?' } %>
+          <%= link_to 'Montrer', menu_item_path(item), class: 'btn btn-info' %>
+          <%= link_to 'Modifier', edit_menu_item_path(item), class: 'btn btn-warning' %>
+          <%= link_to 'Supprimer', menu_item_path(item), method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure?' } %>
         </td>
       </tr>
     <% end %>

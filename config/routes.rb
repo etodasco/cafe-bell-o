@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  # Admin routes within the 'admin' namespace
-  namespace :admin do
-    resources :menu_items, only: [:index, :new, :create, :edit, :show, :update, :destroy]
-    root to: "dashboard#home"  # This defines the root path for the admin dashboard
-  end
+  # Routes for MenuItems
+  resources :menu_items, only: [:index, :new, :create, :edit, :show, :update, :destroy]
+
+  # Route for Dashboard
+  get 'dashboard', to: 'dashboard#home', as: 'dashboard'  # Direct route for dashboard
 
   # Public pages (home, about, menu, contact)
   root to: 'pages#home'
