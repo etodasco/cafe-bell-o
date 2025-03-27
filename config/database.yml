@@ -20,6 +20,7 @@ test:
 
 production:
   <<: *default
-  url: <%= ENV['DATABASE_URL'] %>  # Uses Heroku's DATABASE_URL environment variable
-  pool: 5
-  timeout: 5000
+  database: <%= ENV['DATABASE_URL'] %>
+  cable:
+    url: redis://localhost:6379/1
+    channel_prefix: your_app_production
