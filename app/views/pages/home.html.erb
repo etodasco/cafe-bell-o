@@ -42,7 +42,6 @@
               <%= I18n.l(Time.current, format: :long).split.map(&:capitalize).join(' ') %>
               <p> Spécial du jour </p>
             </h5>
-
             <% if @menu_item_for_today.present? %>
               <h6 class="card-title text-center"><%= @menu_item_for_today.name %></h6>
               <p class="card-text text-center"><%= @menu_item_for_today.description %></p>
