@@ -56,7 +56,7 @@ body {
   .banner img {
     height: 300px;
     object-fit: cover;
-    object-position: -15% 55%; /* Move the image slightly up for mobile */
+    object-position: 55%; /* Move the image slightly up for mobile */
   }
 }
 
