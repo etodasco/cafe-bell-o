@@ -8,16 +8,16 @@ development:
   <<: *default
   database: cafe_bell_o_development
   username: erictodasco
-  password: 
+  password: <%= ENV['DB_PASSWORD'] %> # Add your local DB password here if applicable
   host: localhost
 
 test:
   <<: *default
   database: cafe_bell_o_test
   username: erictodasco
-  password: 
+  password: <%= ENV['DB_PASSWORD'] %> # Add your local DB password here if applicable
   host: localhost
 
 production:
   <<: *default
-  database: <%= ENV['DATABASE_URL'] %>
+  database: <%= ENV['DATABASE_URL'] %> # Ensure DATABASE_URL is set in the production environment
