@@ -6,9 +6,9 @@
   <div class="container">
     
     <!-- Breakfast Menu Section -->
-    <h2 class="mb-4">Breakfast</h2>
+    <h2 class="mb-4">Petit-Déjeuner</h2>
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-      <% @menu_items.where(category: 'Breakfast').each do |menu_item| %>
+      <% @menu_items.where(category: 'Déjeuner').each do |menu_item| %>
         <div class="col">
           <div class="card shadow-sm">
             <div class="card-body">
@@ -23,9 +23,9 @@
     </div>
 
     <!-- Lunch Menu Section -->
-    <h2 class="mt-5 mb-4">Lunch</h2>
+    <h2 class="mt-5 mb-4">Dîner</h2>
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-      <% @menu_items.where(category: 'Lunch').each do |menu_item| %>
+      <% @menu_items.where(category: 'Dîner').each do |menu_item| %>
         <div class="col">
           <div class="card shadow-sm">
             <div class="card-body">
@@ -42,7 +42,7 @@
     <!-- Desserts Menu Section -->
     <h2 class="mt-5 mb-4">Desserts</h2>
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-      <% @menu_items.where(category: 'Dessert').each do |menu_item| %>
+      <% @menu_items.where(category: 'Desserts').each do |menu_item| %>
         <div class="col">
           <div class="card shadow-sm">
             <div class="card-body">
