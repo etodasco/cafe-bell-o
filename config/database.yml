@@ -1,51 +1,28 @@
-# SQLite. Versions 3.8.0 and up are supported.
-#   gem install sqlite3
-#
-#   Ensure the SQLite 3 gem is defined in your Gemfile
-#   gem "sqlite3"
-#
 default: &default
-  adapter: sqlite3
+  adapter: postgresql
+  encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
 development:
   <<: *default
-  database: storage/development.sqlite3
+  database: cafe_bell_o_development
+  username: erictodasco
+  password: 
+  host: localhost
 
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
-# Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: storage/test.sqlite3
-
-
-# Store production database in the storage/ directory, which by default
-# is mounted as a persistent Docker volume in config/deploy.yml.
+  database: cafe_bell_o_test
+  username: erictodasco
+  password: 
+  host: localhost
 
 production:
-  adapter: postgresql
-  database: <%= ENV['DB_NAME'] %> # You can set the database name in your environment variable
-  username: <%= ENV['DB_USERNAME'] %> # Set the username in your environment variable
-  password: <%= ENV['DB_PASSWORD'] %> # Set the password in your environment variable
-  host: <%= ENV['DB_HOST'] %> # Set the host (e.g., localhost or cloud database address)
+  <<: *default
+  database: <%= ENV['DB_NAME'] %>
+  username: <%= ENV['DB_USERNAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
+  host: <%= ENV['DB_HOST'] %>
   pool: 5
   timeout: 5000
-
-# production:
-#   primary:
-#     <<: *default
-#     database: storage/production.sqlite3
-#   cache:
-#     <<: *default
-#     database: storage/production_cache.sqlite3
-#     migrations_paths: db/cache_migrate
-#   queue:
-#     <<: *default
-#     database: storage/production_queue.sqlite3
-#     migrations_paths: db/queue_migrate
-#   cable:
-#     <<: *default
-#     database: storage/production_cable.sqlite3
-#     migrations_paths: db/cable_migrate

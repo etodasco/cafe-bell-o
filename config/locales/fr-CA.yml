@@ -13,6 +13,12 @@ fr-CA:
       user:
         signed_in: 'Vous êtes connecté avec succès.'
         signed_out: 'Vous êtes déconnecté avec succès.'
+    registrations:
+      user:
+        signed_up: "Votre compte a été créé avec succès."
+        signed_up_but_unconfirmed: "Votre compte a été créé, mais vous devez confirmer votre adresse e-mail avant de pouvoir vous connecter."
+        signed_up_but_locked: "Votre compte a été créé, mais il est verrouillé."
+        signed_up_but_inactive: "Votre compte a été créé, mais il est inactif."
   date:
     day_names:
       - "Dimanche"
