@@ -51,21 +51,41 @@
   font-weight: bold; /* Make the button text bolder */
   color: #ffffff;
 }
- .banner {
-    width: 100%;
-    height: 400px; /* Fixed height */
-    overflow: hidden; /* Prevents overflow */
-    display: flex;
-    justify-content: center; /* Centers the image horizontally */
-    align-items: center; /* Centers the image vertically */
+
+/* Banner container */
+.banner {
+  width: 100%;
+  height: 50vh; /* Use viewport height (50% of screen height) to make it flexible */
+  overflow: hidden;
+  display: flex;
+  justify-content: center; /* Centers the image horizontally */
+  align-items: center; /* Centers the image vertically */
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container */
+  object-position: center center; /* Keeps the image centered */
+}
+
+/* Adjustments for larger screens (e.g., desktops) */
+@media (min-width: 1024px) {
+  .banner {
+    height: 60vh; /* Increase height for larger screens (60% of the viewport height) */
   }
-  
+}
+
+/* Adjustments for smaller screens (e.g., mobile and tablet) */
+@media (max-width: 768px) {
+  .banner {
+    height: 50vh; /* Use 50% of the viewport height on smaller screens */
+  }
   .banner img {
-    width: 100%; /* Ensures it scales to the container width */
-    height: 100%; /* Forces it to match the .banner height */
-    object-fit: cover; /* Ensures the image covers the container without distortion */
-    object-position: 50% 50%;
+    object-fit: cover;
+    object-position: center center;
   }
+}
 
   /*Shop images*/
   .cafe-img {
