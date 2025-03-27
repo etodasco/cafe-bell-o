@@ -64,20 +64,37 @@ hr {
   margin: 20px 0;
 }
 
+/* Gallery container */
 .gallery {
   display: flex;
-  justify-content: center;
-  gap: 10px;
-  overflow-x: auto;  /* Allows horizontal scrolling if images overflow */
+  justify-content: flex-start; /* Align items to the left */
+  gap: 10px; /* Adds space between images */
+  overflow-x: auto; /* Allows horizontal scrolling */
+  padding: 10px 0; /* Optional: add some padding */
+  flex-wrap: nowrap; /* Ensure images stay in one row on mobile */
 }
 
+/* Gallery image styles */
 .gallery img {
-  width: 200px;
-  height: auto;  /* Keeps the aspect ratio of the images */
-  object-fit: cover;  /* Ensures the image doesn't stretch */
-  border-radius: 5px;  /* Optional for rounded corners */
-  object-position: center;
+  width: 200px; /* Fixed width for each image */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure images don't stretch */
+  border-radius: 5px; /* Optional: rounded corners */
 }
+
+/* For mobile screens */
+@media (max-width: 768px) {
+  .gallery {
+    justify-content: flex-start; /* Align images to the left */
+    overflow-x: auto; /* Enable scrolling */
+    flex-wrap: nowrap; /* Prevent wrapping of images */
+  }
+
+  .gallery img {
+    width: 150px; /* Smaller image size on mobile */
+  }
+}
+
 
 .special {
   background-color: #ffffff;  /* Lighter background for a fresher look */
