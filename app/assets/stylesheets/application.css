@@ -171,6 +171,18 @@ footer a {
   color: inherit; /* Inherit the text color */
 }
 
+/* Increase icon size */
+footer .nav i {
+  font-size: 32px; /* Adjust this size to make the icons larger */
+  color: #6c757d; /* Bootstrap default text color */
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition for color and size */
+}
+
+footer .nav a:hover i {
+  color: #007bff; /* A shade of blue for hover effect */
+  transform: scale(1.2); /* Slightly enlarge the icon on hover */
+}
+
 footer a:hover {
   color: #007bff; /* Hover effect on links */
 }
