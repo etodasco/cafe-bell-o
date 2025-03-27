@@ -1,30 +1,29 @@
-<%# <footer class="bg-light text-center py-3">
-  <p>©  Cafe Bell-O. All rights reserved.</p>
-</footer> %>
-
-<footer class="d-flex flex-column align-items-center mt-3 py-3 border-top">
-      <ul class="nav list-unstyled d-flex justify-content-center mb-2">
-        <li class="mx-2">
-          <a class="facebook-footer" href="https://www.facebook.com/cafe.bell.o.en.art/" target="_blank">
-            <i class="fa-brands fa-facebook fa-lg"></i>
-          </a>
-        </li>
-      </ul>
-        <%# <li class="mx-2">
-          <a class="instagram-footer" href="#" target="_blank">
-            <i class="fa-brands fa-instagram fa-lg"></i>
-          </a>
-        </li>
-        <li class="mx-2">
-          <a class="x-footer" href="#" target="_blank">
-            <i class="fa-brands fa-x-twitter fa-lg"></i>
-          </a>
-        </li> %>
-
-      <div class="text-center">
-        <a href="/" class="text-body-secondary text-decoration-none lh-1">
-          <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
-        </a>
-        <span class="text-body-secondary">© <%= Time.current.year %> Cafe Bell-O. All rights reserved.</span>
-      </div>
+<footer class="footer d-flex flex-column align-items-center py-4 border-top mt-auto">
+  <ul class="nav list-unstyled d-flex justify-content-center mb-2">
+    <li class="mx-2">
+      <a class="facebook-footer" href="https://www.facebook.com/cafe.bell.o.en.art/" target="_blank" aria-label="Facebook">
+        <i class="fa-brands fa-facebook fa-lg"></i>
+      </a>
+    </li>
+    <!-- Uncomment and complete the other social media links as needed -->
+    <!-- <li class="mx-2">
+      <a class="instagram-footer" href="#" target="_blank" aria-label="Instagram">
+        <i class="fa-brands fa-instagram fa-lg"></i>
+      </a>
+    </li> -->
+    <!-- <li class="mx-2">
+      <a class="twitter-footer" href="#" target="_blank" aria-label="Twitter">
+        <i class="fa-brands fa-x-twitter fa-lg"></i>
+      </a>
+    </li> -->
+  </ul>
+  
+  <div class="text-center">
+    <a href="/" class="text-body-secondary text-decoration-none lh-1">
+      <svg class="bi" width="30" height="24">
+        <use xlink:href="#bootstrap"></use>
+      </svg>
+    </a>
+    <span class="text-body-secondary">© <%= Time.current.year %> Cafe Bell-O. All rights reserved.</span>
+  </div>
 </footer>
