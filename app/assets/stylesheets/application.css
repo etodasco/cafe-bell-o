@@ -1,4 +1,5 @@
 /* Custom styles for flash messages */
+/* Custom styles for flash messages */
 .custom-alert {
   border: 2px solid #007bff; /* Blue border */
   background-color: #e7f3fe; /* Light blue background */
@@ -12,10 +13,24 @@
   position: relative; /* Position relative for the button */
 }
 
+/* Custom styles for success alert (override Bootstrap's default green) */
+.alert-success.custom-alert {
+  border-color: #28a745; /* Green border */
+  background-color: #d4edda; /* Light green background */
+  color: #155724; /* Dark green text */
+}
+
+/* Custom styles for danger alert (override Bootstrap's default red) */
+.alert-danger.custom-alert {
+  border-color: #dc3545; /* Red border */
+  background-color: #f8d7da; /* Light red background */
+  color: #721c24; /* Dark red text */
+}
+
 /* Custom styles for the close button */
 .custom-alert .btn-close {
   position: absolute; /* Position absolutely within the alert */
-  top: 13px; /* Align to the top */
+  top: 10px; /* Adjust to align properly with the top of the alert */
   right: 10px; /* Align to the right */
   border: none; /* Remove border */
   color: #0056b3; /* Blue text color */
@@ -35,6 +50,7 @@
   font-weight: bold; /* Make the button text bolder */
   color: #ffffff;
 }
+
 
 body {
   font-family: Arial, sans-serif;
@@ -67,7 +83,7 @@ hr {
 /* Gallery container */
 .gallery {
   display: flex;
-  justify-content: flex-start; /* Align items to the left */
+  justify-content: center; /* Align items to the left */
   gap: 10px; /* Adds space between images */
   overflow-x: auto; /* Allows horizontal scrolling */
   padding: 10px 0; /* Optional: add some padding */
@@ -158,72 +174,69 @@ hr {
 
 /* FOOTER */
 
-/* Navigation Icons */
-.nav i {
-  font-size: 24px; /* Adjust icon size */
-  color: #6c757d; /* Bootstrap default text color */
-  transition: color 0.3s ease-in-out;
-}
-
-.nav a:hover i {
-  color: #007bff; /* A shade of blue for hover effect */
-}
-
-/* Footer styling */
+/* Global footer styles */
 footer {
-  width: 100%;
-  border-top: 1px solid #ddd;
-  background-color: white;
-  padding: 10px 0;
-}
-
-footer p {
-  color: #6c757d; /* Lighter text color */
+  background-color: #fff;
+  border-top: 1px solid #ddd;  /* Light border to separate from content */
+  padding: 20px 0;
   text-align: center;
-  font-size: 14px;
+  width: 100%;
+  position: relative;
+  bottom: 0;
 }
 
-footer a {
-  text-decoration: none; /* Removes underline from links */
-  color: inherit; /* Inherit the text color */
-}
-
-/* Increase icon size */
-footer .nav i {
-  font-size: 32px; /* Adjust this size to make the icons larger */
-  color: #6c757d; /* Bootstrap default text color */
-  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition for color and size */
-}
-
-footer .nav a:hover i {
-  color: #007bff; /* A shade of blue for hover effect */
-  transform: scale(1.2); /* Slightly enlarge the icon on hover */
-}
-
-footer a:hover {
-  color: #007bff; /* Hover effect on links */
-}
-
-/* Add spacing between icons */
-.nav {
+/* Flexbox to center footer content */
+.footer-content {
   display: flex;
-  justify-content: center; /* Center align the icons */
-  gap: 20px; /* Adds spacing between icons */
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Social media icons container */
+.social-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
   margin-bottom: 10px;
 }
 
-/* Responsiveness for mobile */
+/* Individual social media link */
+.social-links li {
+  margin: 0;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #6c757d;  /* Default color */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect on icons */
+.social-links a:hover {
+  color: #007bff;  /* Blue color on hover */
+  transform: scale(1.1);  /* Slightly enlarge the icon */
+}
+
+/* Copyright text */
+.copyright {
+  font-size: 14px;
+  color: #6c757d;
+}
+
+/* Responsive styles */
 @media (max-width: 768px) {
-  footer {
-    padding: 15px 0; /* Increase padding on small screens */
+  .social-links {
+    gap: 10px;
   }
 
-  .nav {
-    gap: 15px; /* Reduce gap on smaller screens */
+  .social-links a {
+    font-size: 20px;  /* Smaller icon size on mobile */
   }
 
-  .nav i {
-    font-size: 20px; /* Slightly smaller icons on mobile */
+  .copyright {
+    font-size: 12px;  /* Smaller text on mobile */
   }
 }
 
