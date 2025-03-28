@@ -94,12 +94,12 @@ hr {
 .carousel-inner,
 .carousel-item {
   width: 100vw; /* Full screen width */
-  height: 100vh; /* Full screen height */
+  height: 80vh; /* Full screen height */
 }
 
 .carousel img {
   width: 100vw; /* Full width */
-  height: 100vh; /* Full height */
+  height: 80vh; /* Full height */
   object-fit: cover; /* Ensures all images fill the space without stretching */
 }
 
@@ -152,7 +152,7 @@ hr {
 .special h5 {
   font-size: 1.5em;  /* Larger heading for emphasis */
   margin-bottom: 10px;  /* Space below the heading */
-  color: #007bff;  /* Accent color for the heading */
+  color: #ff0000;  /* Accent color for the heading */
 }
 
 .special h6 {
@@ -171,11 +171,6 @@ hr {
   font-size: 1.2em;
   font-weight: bold;
   color: #28a745;  /* Green color for price */
-}
-
-.price {
-  color: red;
-  font-weight: bold;
 }
 
 .reviews {

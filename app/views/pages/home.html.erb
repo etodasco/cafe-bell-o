@@ -57,15 +57,16 @@
 
 
   <div class="special">
-    <h5 class="text-muted text-center">
+    <h5 class="text-muted text-center" id="special-date">
       <%= I18n.l(Time.current, format: :long).split.map(&:capitalize).join(' ') %>
     </h5>
-    <h5>Spécial du jour</h5>
+    <h5 class="special-title">Spécial du jour</h5>
+  
     <% if @menu_item_for_today.present? %>
-      <div>
-        <h6><%= @menu_item_for_today.category %></h6>
-        <h6><%= @menu_item_for_today.name %></h6>
-        <p><%= @menu_item_for_today.description %></p>
+      <div class="special-item">
+        <h6 class="category"><%= @menu_item_for_today.category %></h6>
+        <h6 class="item-name"><%= @menu_item_for_today.name %></h6>
+        <p class="item-description"><%= @menu_item_for_today.description %></p>
         <h6 class="price"><%= number_to_currency(@menu_item_for_today.price) %></h6>
       </div>
     <% else %>
@@ -73,7 +74,7 @@
     <% end %>
   </div>
 
-  
+
     <div class="gallery">
         <%= image_tag 'sandwich1.jpg', alt: 'Image 1' %>
         <%= image_tag 'sandwich2.jpg', alt: 'Image 2' %>
