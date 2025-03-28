@@ -9,10 +9,12 @@ Bundler.require(*Rails.groups)
 module Cafebello
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 8.0
+    config.load_defaults 7.0
+
+    config.assets.compile = true
 
     # Add the images directory to the asset paths
-    config.assets.paths << Rails.root.join("app", "assets", "images")
+    config.assets.paths << Rails.root.join('app', 'assets', 'stylesheets')
 
     # Please, add to the `ignore` list any other `lib` subdirectories that do
     # not contain `.rb` files, or that should not be reloaded or eager loaded.
