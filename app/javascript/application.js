@@ -1,12 +1,7 @@
-// Import Rails UJS first for proper initialization
-import Rails from "@rails/ujs";
-Rails.start();  // Initialize Rails UJS
-
-// Import Turbo for Turbo Drive (if you're using Turbo for page navigation)
+// Import Turbo, Rails UJS, and Bootstrap
 import { Turbo } from "@hotwired/turbo-rails";
+import Rails from "@rails/ujs";
+Rails.start(); // Initialize Rails UJS
+import "bootstrap"; // Import Bootstrap for styling
+import "navbar"; // Import your custom navbar script
 
-// Import Stimulus controllers
-import "controllers";
-
-// Import Bootstrap for styling (ensure Bootstrap JS works for dropdowns, modals, etc.)
-import "bootstrap";
