@@ -105,31 +105,43 @@ hr {
 /* Gallery container */
 .gallery {
   display: flex;
-  justify-content: center; /* Align items to the left */
-  gap: 10px; /* Adds space between images */
+  justify-content: flex-start; /* Align items to the left */
+  gap: 20px; /* Adds space between images */
   overflow-x: auto; /* Allows horizontal scrolling */
-  padding: 10px 0; /* Optional: add some padding */
-  flex-wrap: nowrap; /* Ensure images stay in one row on mobile */
+  padding: 20px 0; /* Optional: add some padding */
+  flex-wrap: nowrap; /* Ensure images stay in one row */
+  scroll-snap-type: x mandatory; /* Add snapping for smoother scrolling */
 }
 
 /* Gallery image styles */
 .gallery img {
-  width: 200px; /* Fixed width for each image */
-  height: auto; /* Maintain aspect ratio */
-  object-fit: cover; /* Ensure images don't stretch */
-  border-radius: 5px; /* Optional: rounded corners */
+  width: 300px; /* Set fixed width for all images */
+  height: 300px; /* Set a fixed height for consistency */
+  object-fit: cover; /* Ensure images cover the space without stretching */
+  border-radius: 8px; /* Rounded corners for a nicer look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow to make cards stand out */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+  display: block; /* Ensure images are block-level elements */
+  flex-shrink: 0; /* Prevent images from shrinking */
+  flex-grow: 0; /* Prevent images from growing */
+}
+
+/* Hover effects for images */
+.gallery img:hover {
+  transform: scale(1.05); /* Slightly enlarge the image on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
 }
 
 /* For mobile screens */
 @media (max-width: 768px) {
   .gallery {
     justify-content: flex-start; /* Align images to the left */
-    overflow-x: auto; /* Enable scrolling */
-    flex-wrap: nowrap; /* Prevent wrapping of images */
+    gap: 15px; /* Adjust the gap between images */
   }
 
   .gallery img {
-    width: 150px; /* Smaller image size on mobile */
+    width: 300px; /* Adjust image size for mobile */
+    height: 300px; /* Adjust image height for mobile */
   }
 }
 
