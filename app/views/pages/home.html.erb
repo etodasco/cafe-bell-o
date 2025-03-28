@@ -20,14 +20,46 @@
     </div>
     <hr>
 
-    <div class="gallery">
-        <%= image_tag 'cafebello1.jpg', alt: 'Image 1' %>
-        <%= image_tag 'cafebello_lachute.jpg', alt: 'Image 2' %>
-        <%= image_tag 'cafebello3.jpg', alt: 'Image 3' %>
-        <%= image_tag 'cafebello4.jpg', alt: 'Image 4' %>
+    <div id="restaurantCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <%= image_tag 'cafebello1.jpg', class: 'd-block w-100', alt: 'Image 1' %>
     </div>
+    <div class="carousel-item">
+      <%= image_tag 'cafebello_lachute.jpg', class: 'd-block w-100', alt: 'Image 2' %>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag 'cafebello3.jpg', class: 'd-block w-100', alt: 'Image 3' %>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag 'cafebello4.jpg', class: 'd-block w-100', alt: 'Image 4' %>
+    </div>
+  </div>
+
+  <!-- Carousel Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#restaurantCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#restaurantCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+
+  <!-- Carousel Indicators -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#restaurantCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#restaurantCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#restaurantCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#restaurantCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+  </div>
+</div>
+
 
   <div class="special">
+    <h5 class="text-muted text-center">
+      <%= I18n.l(Time.current, format: :long).split.map(&:capitalize).join(' ') %>
+    </h5>
     <h5>Spécial du jour</h5>
     <% if @menu_item_for_today.present? %>
       <div>
