@@ -7,3 +7,4 @@ pin "bootstrap", to: "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/boots
 pin "@popperjs/core", to: "https://ga.jspm.io/npm:@popperjs/core@2.11.8/lib/index.js"
 pin "@rails/ujs", to: "https://ga.jspm.io/npm:@rails/ujs@7.1.3-4/app/assets/javascripts/rails-ujs.esm.js"
 pin "navbar", to: "navbar.js"  # If you have a custom navbar script
+pin "reviewsCarousel", to: "javascript/reviewsCarousel.js"

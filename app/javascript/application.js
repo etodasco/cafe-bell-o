@@ -4,4 +4,4 @@ import Rails from "@rails/ujs";
 Rails.start(); // Initialize Rails UJS
 import "bootstrap"; // Import Bootstrap for styling
 import "navbar"; // Import your custom navbar script
-
+import "./reviewsCarousel";

@@ -20,19 +20,20 @@
     </div>
     <hr>
 
-    <div id="restaurantCarousel" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <%= image_tag 'cafebello1.jpg', class: 'd-block w-100', alt: 'Image 1' %>
-    </div>
-    <div class="carousel-item">
-      <%= image_tag 'cafebello_lachute.jpg', class: 'd-block w-100', alt: 'Image 2' %>
-    </div>
-    <div class="carousel-item">
-      <%= image_tag 'cafebello3.jpg', class: 'd-block w-100', alt: 'Image 3' %>
-    </div>
-    <div class="carousel-item">
-      <%= image_tag 'cafebello4.jpg', class: 'd-block w-100', alt: 'Image 4' %>
+  <div id="restaurantCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <%= image_tag 'cafebello1.jpg', class: 'd-block w-100', alt: 'Image 1' %>
+      </div>
+      <div class="carousel-item">
+        <%= image_tag 'cafebello_lachute.jpg', class: 'd-block w-100', alt: 'Image 2' %>
+      </div>
+      <div class="carousel-item">
+        <%= image_tag 'cafebello3.jpg', class: 'd-block w-100', alt: 'Image 3' %>
+      </div>
+      <div class="carousel-item">
+        <%= image_tag 'cafebello4.jpg', class: 'd-block w-100', alt: 'Image 4' %>
+      </div>
     </div>
   </div>
 
@@ -74,7 +75,6 @@
     <% end %>
   </div>
 
-
     <div class="gallery">
         <%= image_tag 'sandwich1.jpg', alt: 'Image 1' %>
         <%= image_tag 'sandwich2.jpg', alt: 'Image 2' %>
@@ -82,29 +82,40 @@
         <%= image_tag 'cafebello1.jpg', alt: 'Image 4' %>
     </div>
 
-    <div class="reviews">
-      <div class="review">
-          <a href="#">
-            <img src="https://scontent.fymq2-1.fna.fbcdn.net/v/t39.30808-1/469702539_3833072000290090_4412799377740084697_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=110&ccb=1-7&_nc_sid=e99d92&_nc_ohc=-p1bAKFXnuUQ7kNvgEOnPqd&_nc_oc=AdlFjrOMhplabQa-6uW7Qda9cvDf2cr31SEN720wDw9S9X2OivCfwk3qb_NcTZ3M69M&_nc_zt=24&_nc_ht=scontent.fymq2-1.fna&_nc_gid=PK72mBUAGoMv-_g-w5IPnw&oh=00_AYGbnQEUByvRFmgUqhdxW-zXjnc2Wb_HKlMAfwiUtGSztw&oe=67E8E4C8" alt="Eric" />
-          </a>
-          <h2>Eric</h2>
-          <p>Better than Tim's.. No comparison</p>
-      </div>
-      <div class="review">
-          <a href="#">
-            <img src="https://scontent.fymq2-1.fna.fbcdn.net/v/t39.30808-6/463243558_10160535929290415_2800769595029463953_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=RBKDLzHjYQYQ7kNvgGbgaLb&_nc_oc=AdnKlVKZ9wgrLeEq8d0PlX3jeHAtUfeztPmzZlcsFFinPTzReKWkPy8RHCK5z4EDtaY&_nc_zt=23&_nc_ht=scontent.fymq2-1.fna&_nc_gid=EQLIms2HCGIRoKlZNp7nCQ&oh=00_AYHQyv7Ewlv6FRb0PdzNnAYk4l_FpSR01dRYGeYOnVzG2w&oe=67E8B5D1" alt="Louise" />
-          </a>
-          <h2>Louise</h2>
-          <p>OMG...</p>
-      </div>
-        <div class="review">
-          <a href="#">
-            <img src="https://scontent.fymq2-1.fna.fbcdn.net/v/t39.30808-6/362685559_6647676428608731_1447235434484137767_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Fy79CXkFxWYQ7kNvgF0yZAD&_nc_oc=AdnUu57qyZf9l37LgjeUUNmM5Wd5XU0ucQhTsCis4p6PBFCQm2guGfQ6vrrWfT2iSDU&_nc_zt=23&_nc_ht=scontent.fymq2-1.fna&_nc_gid=ACd46EoFfdSPjEMLN780GQ&oh=00_AYHre1bK7VH-_Htzp9CWl81f7TObzDRApxGxybzqnNUzbw&oe=67E8C1F8" alt="Norm" />
-          </a>
-          <h2>Norm</h2>
-          <p>Best sandwich in town.</p>
-        </div>
+<div class="customer-reviews mt-4">
+  <h3>Écoutez ce que nos clients ont à dire !</h3> <!-- Added the heading here -->
+
+  <div class="reviews">
+    <div class="review active"> <!-- The first review is active by default -->
+      <a href="#">
+        <img src="https://scontent.fymq2-1.fna.fbcdn.net/v/t39.30808-1/469702539_3833072000290090_4412799377740084697_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=110&ccb=1-7&_nc_sid=e99d92&_nc_ohc=-p1bAKFXnuUQ7kNvgEOnPqd&_nc_oc=AdlFjrOMhplabQa-6uW7Qda9cvDf2cr31SEN720wDw9S9X2OivCfwk3qb_NcTZ3M69M&_nc_zt=24&_nc_ht=scontent.fymq2-1.fna&_nc_gid=PK72mBUAGoMv-_g-w5IPnw&oh=00_AYGbnQEUByvRFmgUqhdxW-zXjnc2Wb_HKlMAfwiUtGSztw&oe=67E8E4C8" alt="Eric" />
+      </a>
+      <h2>Eric</h2>
+      <p>Better than Tim's.. No comparison</p>
     </div>
-<!-- /.row -->
+    <div class="review">
+      <a href="#">
+        <img src="https://scontent.fymq2-1.fna.fbcdn.net/v/t39.30808-6/463243558_10160535929290415_2800769595029463953_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=RBKDLzHjYQYQ7kNvgGbgaLb&_nc_oc=AdnKlVKZ9wgrLeEq8d0PlX3jeHAtUfeztPmzZlcsFFinPTzReKWkPy8RHCK5z4EDtaY&_nc_zt=23&_nc_ht=scontent.fymq2-1.fna&_nc_gid=EQLIms2HCGIRoKlZNp7nCQ&oh=00_AYHQyv7Ewlv6FRb0PdzNnAYk4l_FpSR01dRYGeYOnVzG2w&oe=67E8B5D1" alt="Louise" />
+      </a>
+      <h2>Louise</h2>
+      <p>OMG...</p>
+    </div>
+    <div class="review">
+      <a href="#">
+        <img src="https://scontent.fymq2-1.fna.fbcdn.net/v/t39.30808-6/362685559_6647676428608731_1447235434484137767_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Fy79CXkFxWYQ7kNvgF0yZAD&_nc_oc=AdnUu57qyZf9l37LgjeUUNmM5Wd5XU0ucQhTsCis4p6PBFCQm2guGfQ6vrrWfT2iSDU&_nc_zt=23&_nc_ht=scontent.fymq2-1.fna&_nc_gid=ACd46EoFfdSPjEMLN780GQ&oh=00_AYHre1bK7VH-_Htzp9CWl81f7TObzDRApxGxybzqnNUzbw&oe=67E8C1F8" alt="Norm" />
+      </a>
+      <h2>Norm</h2>
+      <p>Best sandwich in town.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Dot navigation -->
+<div class="carousel-dots">
+  <div class="dot active"></div>
+  <div class="dot"></div>
+  <div class="dot"></div>
+</div>
+
 </body>
 </html>

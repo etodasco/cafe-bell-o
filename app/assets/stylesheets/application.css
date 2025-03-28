@@ -1,8 +1,91 @@
+.customer-reviews h3 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 5px; /* Reduced spacing */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px; /* Adjusted padding */
+}
+
+.customer-reviews h3::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #ff6600;
+  margin: 3px auto 0; /* Reduced margin for a tighter fit */
+  border-radius: 2px;
+}
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  gap: 10px; /* Reduced space between reviews */
+  margin: 10px auto; /* Reduced top and bottom margin */
+  padding-bottom: 0;
+  position: relative;
+}
+
+.review {
+  text-align: center;
+  width: 100%; /* Ensures reviews take up full width */
+  display: none; /* Hide all reviews by default */
+}
+
+.review.active {
+  display: inline-block; /* Only the active review is shown */
+}
+
+.review img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 5px; /* Reduced margin to bring the dots closer to reviews */
+}
+
+.carousel-dots .dot {
+  width: 10px;
+  height: 10px;
+  background-color: #888;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carousel-dots .dot.active {
+  background-color: #555;
+}
+
+p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Hide scrollbar */
+.reviews::-webkit-scrollbar {
+  display: none;
+}
+
 /* Custom styles for flash messages */
 html,
 body {
   overflow-x: hidden; /* Prevents horizontal scrolling */
   width: 100%; /* Ensures content doesn’t exceed the viewport width */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 * {
@@ -59,13 +142,6 @@ body {
   font-family: "Helvetica", sans-serif; /* Ensure proper font styling */
   font-weight: bold; /* Make the button text bolder */
   color: #ffffff;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  text-align: center;
 }
 
 /* Default style for desktop and larger screens */
@@ -279,30 +355,6 @@ footer {
 @media screen and (min-width: 769px) {
   .d-flex {
     height: 100vh; /* For desktop, it remains centered vertically */
-  }
-}
-
-/* Ensure navbar is aligned properly on mobile */
-@media (max-width: 768px) {
-  .navbar-collapse {
-    display: flex;
-    flex-direction: column; /* Stack the navbar items vertically */
-    align-items: center; /* Center items horizontally */
-    text-align: center; /* Ensure the links are centered */
-  }
-
-  .navbar-nav {
-    width: 100%; /* Take up the full width of the screen */
-    display: flex;
-    flex-direction: column; /* Stack navbar items vertically */
-    align-items: center; /* Center items */
-    padding-left: 0; /* Remove default padding */
-  }
-
-  .navbar-nav .nav-link {
-    padding: 10px 20px; /* Adjust padding for better alignment */
-    font-size: 1.2rem; /* Adjust font size */
-    text-align: center; /* Ensure links are centered */
   }
 }
 
