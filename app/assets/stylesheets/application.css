@@ -1,6 +1,6 @@
 /* Custom styles for flash messages */
-/* Custom styles for flash messages */
-html, body {
+html,
+body {
   overflow-x: hidden; /* Prevents horizontal scrolling */
   width: 100%; /* Ensures content doesn’t exceed the viewport width */
 }
@@ -56,11 +56,10 @@ html, body {
 
 /* Bootstrap default .btn-close style override */
 .custom-alert .btn-close {
-  font-family: 'Helvetica', sans-serif; /* Ensure proper font styling */
+  font-family: "Helvetica", sans-serif; /* Ensure proper font styling */
   font-weight: bold; /* Make the button text bolder */
   color: #ffffff;
 }
-
 
 body {
   font-family: Arial, sans-serif;
@@ -134,43 +133,42 @@ hr {
   }
 }
 
-
 .special {
-  background-color: #ffffff;  /* Lighter background for a fresher look */
-  padding: 30px;  /* Increased padding for a spacious feel */
-  margin: 20px auto;  /* Centered with margin */
-  width: 80%;  /* Wider container */
-  max-width: 600px;  /* Maximum width for consistency on large screens */
-  border-radius: 12px;  /* Slightly more rounded corners */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);  /* Subtle and larger shadow for depth */
-  font-family: 'Arial', sans-serif;  /* Clean and modern font */
-  color: #333;  /* Darker text color for better readability */
-  text-align: center;  /* Center the text inside */
-  border: 1px solid #ddd;  /* Light border for structure */
+  background-color: #ffffff; /* Lighter background for a fresher look */
+  padding: 30px; /* Increased padding for a spacious feel */
+  margin: 20px auto; /* Centered with margin */
+  width: 80%; /* Wider container */
+  max-width: 600px; /* Maximum width for consistency on large screens */
+  border-radius: 12px; /* Slightly more rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle and larger shadow for depth */
+  font-family: "Arial", sans-serif; /* Clean and modern font */
+  color: #333; /* Darker text color for better readability */
+  text-align: center; /* Center the text inside */
+  border: 1px solid #ddd; /* Light border for structure */
 }
 
 .special h5 {
-  font-size: 1.5em;  /* Larger heading for emphasis */
-  margin-bottom: 10px;  /* Space below the heading */
-  color: #ff0000;  /* Accent color for the heading */
+  font-size: 1.5em; /* Larger heading for emphasis */
+  margin-bottom: 10px; /* Space below the heading */
+  color: #ff0000; /* Accent color for the heading */
 }
 
 .special h6 {
-  font-size: 1.2em;  /* Slightly larger size for the dish name */
-  font-weight: normal;  /* Less emphasis on the dish name */
-  margin-bottom: 8px;  /* Space below the dish name */
+  font-size: 1.2em; /* Slightly larger size for the dish name */
+  font-weight: normal; /* Less emphasis on the dish name */
+  margin-bottom: 8px; /* Space below the dish name */
 }
 
 .special p {
   font-size: 1em;
-  margin-bottom: 10px;  /* Space below the description */
-  color: #555;  /* Slightly lighter color for text */
+  margin-bottom: 10px; /* Space below the description */
+  color: #555; /* Slightly lighter color for text */
 }
 
 .special .price {
   font-size: 1.2em;
   font-weight: bold;
-  color: #28a745;  /* Green color for price */
+  color: #28a745; /* Green color for price */
 }
 
 .reviews {
@@ -195,7 +193,7 @@ hr {
 /* Global footer styles */
 footer {
   background-color: #fff;
-  border-top: 1px solid #ddd;  /* Light border to separate from content */
+  border-top: 1px solid #ddd; /* Light border to separate from content */
   padding: 20px 0;
   text-align: center;
   width: 100%;
@@ -227,14 +225,14 @@ footer {
 
 .social-links a {
   text-decoration: none;
-  color: #6c757d;  /* Default color */
+  color: #6c757d; /* Default color */
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
 /* Hover effect on icons */
 .social-links a:hover {
-  color: #007bff;  /* Blue color on hover */
-  transform: scale(1.1);  /* Slightly enlarge the icon */
+  color: #007bff; /* Blue color on hover */
+  transform: scale(1.1); /* Slightly enlarge the icon */
 }
 
 /* Copyright text */
@@ -250,11 +248,11 @@ footer {
   }
 
   .social-links a {
-    font-size: 20px;  /* Smaller icon size on mobile */
+    font-size: 20px; /* Smaller icon size on mobile */
   }
 
   .copyright {
-    font-size: 12px;  /* Smaller text on mobile */
+    font-size: 12px; /* Smaller text on mobile */
   }
 }
 
@@ -262,12 +260,69 @@ footer {
 @media screen and (max-width: 768px) {
   .d-flex {
     height: auto;
-    padding-top: 30px;  /* Adjust this value to move the form up */
+    padding-top: 30px; /* Adjust this value to move the form up */
   }
 }
 
 @media screen and (min-width: 769px) {
   .d-flex {
-    height: 100vh;  /* For desktop, it remains centered vertically */
+    height: 100vh; /* For desktop, it remains centered vertically */
+  }
+}
+
+/* Ensure navbar is aligned properly on mobile */
+@media (max-width: 768px) {
+  .navbar-collapse {
+    display: flex;
+    flex-direction: column; /* Stack the navbar items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Ensure the links are centered */
+  }
+
+  .navbar-nav {
+    width: 100%; /* Take up the full width of the screen */
+    display: flex;
+    flex-direction: column; /* Stack navbar items vertically */
+    align-items: center; /* Center items */
+    padding-left: 0; /* Remove default padding */
+  }
+
+  .navbar-nav .nav-link {
+    padding: 10px 20px; /* Adjust padding for better alignment */
+    font-size: 1.2rem; /* Adjust font size */
+    text-align: center; /* Ensure links are centered */
+  }
+}
+
+/* Special section alignment */
+@media (max-width: 768px) {
+  .special {
+    text-align: left; /* Align text to the left for better mobile readability */
+    padding: 20px; /* Slightly reduce padding for mobile */
+    width: 90%; /* Allow more room on mobile */
+  }
+
+  .special h5 {
+    font-size: 1.3em; /* Slightly reduce the heading size on mobile */
+    margin-bottom: 8px; /* Reduce space below the heading */
+  }
+
+  .special .price {
+    font-size: 1.1em; /* Adjust price font size */
+  }
+}
+
+/* Adjust carousel for mobile view */
+@media (max-width: 768px) {
+  .carousel,
+  .carousel-inner,
+  .carousel-item {
+    height: 60vh; /* Adjust carousel height on mobile */
+  }
+
+  .carousel img {
+    width: 100vw; /* Ensure images cover the full width */
+    height: 60vh; /* Ensure images are responsive */
+    object-fit: cover; /* Ensure no stretching of images */
   }
 }
