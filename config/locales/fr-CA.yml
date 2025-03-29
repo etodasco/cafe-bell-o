@@ -8,6 +8,7 @@ fr-CA:
     failure:
       user:
         not_found_in_database: "Aucun utilisateur trouvé avec ces identifiants"
+        invalid: "Identifiants invalides"  # Added translation here
       admin_only: "Seul l'administrateur peut se connecter."  # Added translation here
     sessions:
       user:
