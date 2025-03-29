@@ -342,8 +342,6 @@
 
   /* OWNER DASHBOARD */
 
-  /* OWNER DASHBOARD */
-
 /* Make the table container responsive */
 .table-responsive {
     width: 100%;
@@ -458,4 +456,112 @@
         width: 50%; /* Half-width buttons on mobile */
         margin-top: 10px;
     }
+}
+
+/* CONTACT PAGE */
+
+/* Container Styling */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header Section */
+.header h1 {
+  font-size: 2.5rem;
+  margin-top: 20px;
+  color: #343a40;
+}
+
+/* Contact Card Section */
+.contact-card {
+  margin-top: 30px;
+}
+
+.contact-card .card {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-card .card-body {
+  padding: 30px;
+}
+
+.contact-card .card-title {
+  font-size: 1.5rem;
+  color: #343a40;
+  margin-bottom: 15px;
+}
+
+/* List Group Styling */
+.list-group-item {
+  font-size: 1rem;
+  padding: 10px 15px;
+  border: 1px solid #dee2e6;
+}
+
+.list-group-item strong {
+  font-weight: 600;
+  color: #007bff;
+}
+
+/* Contact Info Section */
+.contact-info {
+  margin-top: 40px;
+}
+
+.contact-info i {
+  font-size: 1.25rem;
+  margin-right: 10px;
+  color: #007bff;
+}
+
+.contact-info a {
+  font-size: 1rem;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .contact-card .card-body {
+    padding: 20px;
+  }
+
+  .list-group-item {
+    font-size: 0.9rem;
+  }
+
+  .contact-info i {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 576px) {
+  .header h1 {
+    font-size: 1.75rem;
+  }
+
+  .contact-card .card-body {
+    padding: 15px;
+  }
+
+  .list-group-item {
+    font-size: 0.85rem;
+  }
+
+  .contact-info i {
+    font-size: 1rem;
+  }
 }
