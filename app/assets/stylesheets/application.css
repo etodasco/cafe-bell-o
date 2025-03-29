@@ -502,9 +502,10 @@
   border: 1px solid #dee2e6;
 }
 
+/* DAYS OF THE WEEK */
 .list-group-item strong {
   font-weight: 600;
-  color: #007bff;
+  color: #00ab03;
 }
 
 /* Contact Info Section */
@@ -515,7 +516,7 @@
 .contact-info i {
   font-size: 1.25rem;
   margin-right: 10px;
-  color: #007bff;
+  color: #000000;
 }
 
 .contact-info a {
