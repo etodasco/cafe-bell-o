@@ -1,6 +1,7 @@
 // Import Rails UJS and Bootstrap
-import Rails from "@rails/ujs";           // Import Rails UJS
-import "bootstrap";                       // Import Bootstrap for styling
+import Rails from "@rails/ujs";  // Import Rails UJS
+import "bootstrap";              // Import Bootstrap for styling
+import "@popperjs/core";         // Import Popper.js for Bootstrap's dropdowns, tooltips, etc.
 
 Rails.start();  // Initialize Rails UJS
 
