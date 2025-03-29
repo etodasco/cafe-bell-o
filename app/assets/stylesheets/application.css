@@ -97,6 +97,41 @@
     height: 500px;
     object-fit: cover; /* Ensures images fill the area without distortion */
   }
+
+    /* For tablets (768px and larger) */
+  @media (min-width: 768px) {
+    #restaurantCarousel .carousel-item img {
+      height: 50vh; /* 50% of the viewport height */
+      object-fit: cover;
+      object-position: center; /* Keeps image centered */
+    }
+  }
+
+  /* For desktops (1200px and larger) */
+  @media (min-width: 1200px) {
+    #restaurantCarousel .carousel-item img {
+      height: 60vh; /* 60% of the viewport height */
+      object-fit: cover; /* Keeps image covering the container */
+      object-position: center; /* Keeps image centered */
+    }
+  }
+
+  /* Styles for larger screens */
+@media (min-width: 768px) {
+  #restaurantCarousel .carousel-item img {
+    height: 500px; /* Keep height fixed for medium and larger screens */
+    object-fit: cover;
+    object-position: center; /* You can adjust this if necessary */
+  }
+}
+
+/* Styles for even larger screens (e.g., desktop) */
+@media (min-width: 1200px) {
+  #restaurantCarousel .carousel-item img {
+    height: 600px; /* Larger height for desktop */
+    object-position: center; /* Adjust the focus as needed */
+  }
+}
   
   /* Special Section */
   .special {
