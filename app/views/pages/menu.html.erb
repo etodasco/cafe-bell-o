@@ -1,60 +1,62 @@
-<div class="text-center mt-4 mb-4">
-  <h1>Menu</h1>
-</div>
+<div class="container-lg"> <!-- Ensures proper centering on all screen sizes -->
+  <div class="text-center mt-4 mb-4">
+    <h1>Menu</h1>
+  </div>
 
-<div class="album py-5 bg-body-tertiary">
-  <div class="container">
-    
-    <!-- Breakfast Menu Section -->
-    <h2 class="mb-4">Petit-Déjeuner</h2>
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-      <% @menu_items.where(category: 'Déjeuner').each do |menu_item| %>
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="card-body">
-              <h5 class="text-muted"><%= menu_item.category %></h5>
-              <h6 class="card-title"><%= menu_item.name %></h6>
-              <p class="card-text"><%= menu_item.description %></p>
-              <h6 class="text-danger fw-bold">$<%= menu_item.price %></h6>
+  <div class="album py-5 bg-body-tertiary">
+    <div class="container text-center"> <!-- Added text-center to ensure all content is centered -->
+
+      <!-- Breakfast Menu Section -->
+      <h2 class="mb-4">Petit-Déjeuner</h2>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <% @menu_items.where(category: 'Déjeuner').each do |menu_item| %>
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <h5 class="text-muted"><%= menu_item.category %></h5>
+                <h6 class="card-title"><%= menu_item.name %></h6>
+                <p class="card-text"><%= menu_item.description %></p>
+                <h6 class="text-danger fw-bold">$<%= menu_item.price %></h6>
+              </div>
             </div>
           </div>
-        </div>
-      <% end %>
-    </div>
+        <% end %>
+      </div>
 
-    <!-- Lunch Menu Section -->
-    <h2 class="mt-5 mb-4">Dîner</h2>
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-      <% @menu_items.where(category: 'Dîner').each do |menu_item| %>
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="card-body">
-              <h5 class="text-muted"><%= menu_item.category %></h5>
-              <h6 class="card-title"><%= menu_item.name %></h6>
-              <p class="card-text"><%= menu_item.description %></p>
-              <h6 class="text-danger fw-bold">$<%= menu_item.price %></h6>
+      <!-- Lunch Menu Section -->
+      <h2 class="mt-5 mb-4">Dîner</h2>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <% @menu_items.where(category: 'Dîner').each do |menu_item| %>
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <h5 class="text-muted"><%= menu_item.category %></h5>
+                <h6 class="card-title"><%= menu_item.name %></h6>
+                <p class="card-text"><%= menu_item.description %></p>
+                <h6 class="text-danger fw-bold">$<%= menu_item.price %></h6>
+              </div>
             </div>
           </div>
-        </div>
-      <% end %>
-    </div>
+        <% end %>
+      </div>
 
-    <!-- Desserts Menu Section -->
-    <h2 class="mt-5 mb-4">Desserts</h2>
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-      <% @menu_items.where(category: 'Desserts').each do |menu_item| %>
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="card-body">
-              <h5 class="text-muted"><%= menu_item.category %></h5>
-              <h6 class="card-title"><%= menu_item.name %></h6>
-              <p class="card-text"><%= menu_item.description %></p>
-              <h6 class="text-danger fw-bold">$<%= menu_item.price %></h6>
+      <!-- Desserts Menu Section -->
+      <h2 class="mt-5 mb-4">Desserts</h2>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <% @menu_items.where(category: 'Desserts').each do |menu_item| %>
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <h5 class="text-muted"><%= menu_item.category %></h5>
+                <h6 class="card-title"><%= menu_item.name %></h6>
+                <p class="card-text"><%= menu_item.description %></p>
+                <h6 class="text-danger fw-bold">$<%= menu_item.price %></h6>
+              </div>
             </div>
           </div>
-        </div>
-      <% end %>
-    </div>
+        <% end %>
+      </div>
 
+    </div>
   </div>
 </div>
