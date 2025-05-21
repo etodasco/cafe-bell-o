@@ -63,7 +63,7 @@
     <h5 class="text-muted text-center" id="special-date">
       <%= I18n.l(Time.current, format: :long).split.map(&:capitalize).join(' ') %>
     </h5>
-    <h5 class="special-title">Spécial du jour</h5>
+    <h5 class="special-title">Spécial du Jour</h5>
   
     <% if @menu_item_for_today.present? %>
       <div class="special-item">
@@ -87,7 +87,7 @@
     </div>
 
 <div class="customer-reviews mt-4">
-  <h3>Écoutez ce que nos clients ont à dire !</h3> <!-- Added the heading here -->
+  <h3>Ce que nos clients ont à dire!</h3> <!-- Added the heading here -->
 
   <div class="reviews">
     <div class="review active"> <!-- The first review is active by default -->
