@@ -1,21 +1,20 @@
-<div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
-  <div class="card shadow-sm mb-4" style="max-width: 600px; margin: auto;">
-    <img src="path_to_image_or_placeholder.jpg" class="card-img-top" alt="<%= @menu_item.name %>">
+<div class="menu-item-card">
+  <div class="card">
     <div class="card-body">
-      <h5 class="card-title"><%= @menu_item.name %></h5>
-      <p class="card-text"><%= @menu_item.description %></p>
-      <p class="card-text"><strong>Price:</strong> $<%= @menu_item.price %></p>
-      <p class="card-text"><strong>Category:</strong> <%= @menu_item.category %></p>
-      <p class="card-text"><strong>Day:</strong> <%= @menu_item.day %></p>
+      <h2 class="card-title"><%= @menu_item.name %></h2>
+      <p class="card-description"><%= @menu_item.description %></p>
 
-      <div class="d-flex flex-column">
-        <%= link_to "Back to Menu Items", menu_items_path, class: 'btn btn-secondary w-100 mb-2' %>
-        <%= link_to "View Menu Item", menu_item_path(@menu_item), class: 'btn btn-primary w-100 mb-2' %>
-        <%= button_to "Delete Menu Item", menu_item_path(@menu_item), 
-              method: :delete, 
-              data: { confirm: "Are you sure you want to delete this item?" }, 
-              class: "btn btn-danger w-100" %>
-      </div>
+      <ul class="card-info-list">
+        <li><strong>Prix:</strong> $<%= @menu_item.price %></li>
+        <li><strong>Catégorie:</strong> <%= @menu_item.category %></li>
+        <li><strong>Jour:</strong> <%= @menu_item.day %></li>
+      </ul>
     </div>
+  </div>
+
+  <div class="buttons">
+    <%= link_to "Retour", menu_items_path, class: "btn btn-secondary" %>
+    <%= link_to "Voir", menu_item_path(@menu_item), class: "btn btn-primary" %>
+    <%= button_to "Supprimer", menu_item_path(@menu_item), method: :delete, data: { confirm: "Êtes-vous sûr?" }, class: "btn btn-danger" %>
   </div>
 </div>
