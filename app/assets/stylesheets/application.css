@@ -70,6 +70,10 @@
   hr {
     margin: 20px 0;
   }
+
+  .location {
+    color: #ff6600;
+  }
   
   /* General Styles */
   html, body {
@@ -508,6 +512,10 @@
 .list-group-item strong {
   font-weight: 600;
   color: #00ab03;
+}
+
+.closed {
+  color: red;
 }
 
 /* Contact Info Section */
