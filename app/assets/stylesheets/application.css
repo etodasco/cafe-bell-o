@@ -316,7 +316,6 @@
   }
 }
 
-  
   /* Footer */
   footer {
     background-color: #fff;
@@ -621,6 +620,12 @@
   .contact-info i {
     font-size: 1rem;
   }
+}
+
+/* Menu */
+
+.menu-album {
+  background-color: white !important;
 }
 
 /* Admin Show Page */
