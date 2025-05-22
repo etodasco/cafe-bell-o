@@ -47,24 +47,27 @@
     font-weight: bold;
     color: #ffffff;
   }
+
+  .navbar-background-color {
+    background-color: white !important;
+  }
   
-  /* Banner Image */
+/* Banner Image */
+.banner {
+  height: 500px;
+  background-image: url('/banner.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
   .banner {
-    height: 500px;
-    background-image: url('/banner.jpg');
-    background-size: cover;
-    background-position: -20px center;
-    background-repeat: no-repeat;
-    background-color: rgb(11, 44, 19);
+    height: 300px; /* smaller height */
+    background-position: center center; /* adjust if needed */
   }
-  
-  
-  @media (max-width: 768px) {
-    .banner img {
-      height: 300px;
-      object-position: 55%;
-    }
-  }
+}
   
   hr {
     margin: 20px 0;
