@@ -217,61 +217,105 @@
     border-radius: 8px; /* Optional: Rounds the corners */
   }
   
-  /* Customer Reviews */
+  /* Customer Reviews Heading */
+.customer-reviews h3 {
+  text-align: center;
+  font-size: 2.5rem; /* Slightly larger font */
+  font-weight: 600; /* Slightly lighter weight for a more modern feel */
+  color: #333; /* Darker color for better contrast */
+  margin-bottom: 15px; /* Increased margin for better spacing */
+  text-transform: uppercase;
+  letter-spacing: 2px; /* Increased letter spacing for a more stylish look */
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px; /* Increased padding to make the underline less tight */
+}
+
+.customer-reviews h3::after {
+  content: "";
+  display: block;
+  width: 80px; /* Increased width for a bolder line */
+  height: 5px; /* Increased height for the underline */
+  background-color: #ff6600; /* Maintained the color for consistency */
+  margin: 5px auto 0; /* More spacing above the underline */
+  border-radius: 2px;
+}
+
+/* Reviews Section */
+.reviews {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Increased gap for better spacing */
+  margin: 0 auto 30px; /* Added margin at the bottom */
+  padding: 0;
+  position: relative;
+}
+
+.review {
+  text-align: center;
+  width: 100%;
+  display: none; /* Hidden by default */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transitions */
+  opacity: 0; /* Start as invisible */
+}
+
+.review.active {
+  display: block; /* Display active reviews */
+  opacity: 1; /* Fade in the active review */
+  transform: translateY(0); /* Reset translateY when active */
+}
+
+.review img {
+  width: 160px; /* Slightly larger image */
+  height: 160px;
+  border-radius: 50%;
+  margin-bottom: 10px; /* Added spacing below image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.review h2 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  font-weight: bold;
+  color: #444;
+}
+
+.review p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.5;
+  max-width: 400px; /* Max width for the text */
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .customer-reviews h3 {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-    color: #444;
-    margin-bottom: 5px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    position: relative;
-    display: inline-block;
-    padding-bottom: 5px;
+    font-size: 2rem; /* Slightly smaller heading font on mobile */
+    letter-spacing: 1px; /* Slightly reduced letter-spacing */
   }
-  
-  .customer-reviews h3::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 4px;
-    background-color: #ff6600;
-    margin: 3px auto 0;
-    border-radius: 2px;
-  }
-  
-  /* Reviews Section */
+
   .reviews {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin: 10px auto;
-    padding-bottom: 0;
-    position: relative;
+    gap: 15px; /* Reduced gap between reviews */
+    padding: 0 20px;
   }
-  
-  .review {
-    text-align: center;
-    width: 100%;
-    display: none;
-  }
-  
-  .review.active {
-    display: inline-block;
-  }
-  
+
   .review img {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
+    width: 120px; /* Smaller image size on mobile */
+    height: 120px;
   }
-  
-  p {
-    font-size: 1rem;
-    color: #555;
+
+  .review h2 {
+    font-size: 1.3rem; /* Smaller title font on mobile */
   }
+
+  .review p {
+    font-size: 1rem; /* Smaller paragraph text on mobile */
+  }
+}
+
   
   /* Footer */
   footer {
