@@ -65,16 +65,16 @@
     </h5>
     <h5 class="special-title">Spécial du Jour</h5>
   
-    <% if @menu_item_for_today.present? %>
+    <% if @special_of_the_day.present? %>
       <div class="special-item">
-        <h6 class="category"><%= @menu_item_for_today.category %></h6>
-        <h6 class="item-name"><%= @menu_item_for_today.name %></h6>
-        <p class="item-description"><%= @menu_item_for_today.description %></p>
-        <h6 class="price"><%= number_to_currency(@menu_item_for_today.price) %></h6>
+        <h6 class="item-name"><%= @special_of_the_day.name %></h6>
+        <p class="item-description"><%= @special_of_the_day.description %></p>
+        <h6 class="price"><%= number_to_currency(@special_of_the_day.price) %></h6>
       </div>
     <% else %>
       <p>Aucun spécial disponible pour aujourd’hui</p>
     <% end %>
+
   </div>
 
     <div class="gallery">

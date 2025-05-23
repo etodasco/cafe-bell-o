@@ -5,29 +5,26 @@ class MenuItem < ApplicationRecord
   validates :price, presence: true
   validates :category, presence: true
 
-  # Callback to translate the day before saving
-  before_save :translate_day_to_english
+  # Callback to translate the day to French before saving
+  before_save :translate_day_to_french
 
-  # Define the DAY_MAP constant at the class level
+  # Map English day names to French day names
   DAY_MAP = {
-    "lundi" => "Monday",
-    "mardi" => "Tuesday",
-    "mercredi" => "Wednesday",
-    "jeudi" => "Thursday",
-    "vendredi" => "Friday",
-    "samedi" => "Saturday",
-    "dimanche" => "Sunday"
+    "Monday" => "Lundi",
+    "Tuesday" => "Mardi",
+    "Wednesday" => "Mercredi",
+    "Thursday" => "Jeudi",
+    "Friday" => "Vendredi",
+    "Saturday" => "Samedi",
+    "Sunday" => "Dimanche"
   }
 
   private
 
-  # Method to translate day input from French to English
-  def translate_day(day_in_french)
-    DAY_MAP[day_in_french.downcase] || day_in_french
-  end
-
-  # Callback method that triggers translation before save
-  def translate_day_to_english
-    self.day = translate_day(self.day) if self.day.present?
+  # Translate English day name to French, or keep original if not found
+  def translate_day_to_french
+    if self.day.present? && DAY_MAP.key?(self.day)
+      self.day = DAY_MAP[self.day]
+    end
   end
 end
