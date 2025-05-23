@@ -778,3 +778,129 @@
     max-width: 120px;
   }
 }
+
+.admin-dashboard {
+  font-family: 'Helvetica Neue', sans-serif;
+  background: #f9f9f9;
+  padding: 0;
+}
+
+.admin-dashboard .admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.admin-dashboard .admin-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.admin-dashboard .add-button {
+  background: #4CAF50;
+  color: white;
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.admin-dashboard .add-button:hover {
+  background: #43a047;
+}
+
+.admin-dashboard .menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.admin-dashboard .menu-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.admin-dashboard .menu-info {
+  margin-bottom: 1rem;
+}
+
+.admin-dashboard .menu-info h2 {
+  margin: 0.3rem 0;
+  font-size: 1.25rem;
+}
+
+.admin-dashboard .menu-info p {
+  margin: 0.3rem 0;
+  color: #555;
+}
+
+.admin-dashboard .menu-info .category {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #888;
+  text-transform: uppercase;
+}
+
+.admin-dashboard .menu-info .day {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.admin-dashboard .menu-info .price {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #e53935;
+}
+
+.admin-dashboard .menu-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.admin-dashboard .action-button {
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.admin-dashboard .view {
+  background: #2196F3;
+  color: white;
+}
+
+.admin-dashboard .view:hover {
+  background: #1976D2;
+}
+
+.admin-dashboard .edit {
+  background: #FFC107;
+  color: black;
+}
+
+.admin-dashboard .edit:hover {
+  background: #FFA000;
+}
+
+.admin-dashboard .delete {
+  background: #F44336;
+  color: white;
+}
+
+.admin-dashboard .delete:hover {
+  background: #D32F2F;
+}
+
