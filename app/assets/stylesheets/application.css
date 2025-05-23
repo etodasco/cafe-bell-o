@@ -805,7 +805,6 @@
   align-items: center;
   padding: 2rem;
   background: #fff;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 .admin-page .admin-dashboard .admin-header h1 {
@@ -823,6 +822,19 @@
   transition: background 0.3s;
 }
 
+@media (max-width: 576px) {
+  .admin-page .admin-dashboard .admin-header {
+    flex-direction: column;
+    align-items: flex-start; /* align left or center if you want */
+    gap: 1rem; /* spacing between h1 and button */
+  }
+
+  .admin-page .admin-dashboard .add-button {
+    align-self: center; /* keep button aligned left */
+    /* or use align-self: center; to center it */
+  }
+}
+
 .admin-page .admin-dashboard .add-button:hover {
   background: #43a047;
 }
@@ -832,6 +844,7 @@
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 1.5rem;
   padding: 2rem;
+  background-color: white;
 }
 
 .admin-page .admin-dashboard .menu-card {
@@ -843,6 +856,16 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
+@media (max-width: 768px) {
+  .admin-page .admin-dashboard .menu-card {
+    width: 90%;         /* or a fixed width like 320px */
+    max-width: 320px;   /* optional max width */
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 
 .admin-page .admin-dashboard .menu-info {
   margin-bottom: 1rem;
@@ -879,7 +902,7 @@
 .admin-page .admin-dashboard .menu-actions {
   display: flex;
   gap: 0.5rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .admin-page .admin-dashboard .action-button {
