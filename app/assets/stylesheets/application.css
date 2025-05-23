@@ -842,7 +842,7 @@
 
 .admin-page .admin-dashboard .menu-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(375px, 1fr));
   gap: 1.5rem;
   padding: 2rem;
   background-color: white;
@@ -850,9 +850,9 @@
 
 @media (max-width: 575px) {
   .admin-page .admin-dashboard .menu-grid {
-    grid-template-columns: 1fr; /* single column */
+    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr)); /* single column */
     justify-content: center;   /* center grid items */
-    max-width: 320px;          /* fix the max width to the card width */
+    max-width: 375px;          /* fix the max width to the card width */
     margin: 0 auto;            /* center the grid container itself */
     padding: 1rem;             /* optional, reduce padding on small screens */
   }
@@ -861,12 +861,15 @@
 .admin-page .admin-dashboard .menu-card {
   background: #fff;
   border-radius: 8px;
-  padding: 1.2rem;
+  padding: 1.8rem; /* ⬆️ increase padding */
+  max-width: 460px; /* optional: define max width */
+  width: 100%;      /* ensure it fills available grid space */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
+
 
 @media (max-width: 768px) {
   .admin-page .admin-dashboard .menu-card {
