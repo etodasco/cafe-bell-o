@@ -795,7 +795,7 @@
 /* ADMIN INDEX */
 .admin-page .admin-dashboard {
   font-family: 'Helvetica Neue', sans-serif;
-  background: #f9f9f9;
+  background: white;
   padding: 0;
 }
 
@@ -810,6 +810,7 @@
 .admin-page .admin-dashboard .admin-header h1 {
   margin: 0;
   font-size: 2rem;
+  align-self: center;
 }
 
 .admin-page .admin-dashboard .add-button {
@@ -912,7 +913,9 @@
 .admin-page .admin-dashboard .menu-actions {
   display: flex;
   gap: 0.5rem;
-  flex-wrap: nowrap;
+  flex-wrap: nowrap; /* or wrap if you want wrapping */
+  justify-content: center; /* centers items horizontally */
+  align-items: center; /* vertically center if buttons have different heights */
 }
 
 .admin-page .admin-dashboard .action-button {
