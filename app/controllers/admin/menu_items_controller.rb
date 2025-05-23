@@ -13,9 +13,9 @@ class Admin::MenuItemsController < Admin::BaseController
     @menu_item = MenuItem.new(menu_item_params)
 
     if @menu_item.save
-      redirect_to admin_menu_items_path, notice: "Menu item added successfully."
+      redirect_to admin_menu_items_path, notice: "Élément de menu ajouté avec succès."
     else
-      render :new, alert: "There was an error adding the menu item."
+      render :new, alert: "Une erreur s'est produite lors de l'ajout de l'élément de menu."
     end
   end
 
@@ -29,17 +29,17 @@ class Admin::MenuItemsController < Admin::BaseController
 
   def update
     if @menu_item.update(menu_item_params)
-      redirect_to admin_menu_items_path, notice: "Menu item updated successfully."
+      redirect_to admin_menu_items_path, notice: "Élément de menu mis à jour avec succès."
     else
-      render :edit, alert: "There was an error updating the menu item."
+      render :edit, alert: "Une erreur s’est produite lors de la mise à jour de l’élément de menu."
     end
   end
 
   def destroy
     if @menu_item.destroy
-      redirect_to admin_menu_items_path, notice: "Menu item deleted successfully."
+      redirect_to admin_menu_items_path, notice: "Élément de menu supprimé avec succès."
     else
-      redirect_to admin_menu_items_path, alert: "There was an error deleting the menu item."
+      redirect_to admin_menu_items_path, alert: "Une erreur s’est produite lors de la suppression de l’élément de menu."
     end
   end
 
