@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :menu_items, only: [:index, :new, :create, :edit, :show, :update, :destroy]
 
   # Route for Dashboard
-  get 'dashboard', to: 'dashboard#home', as: 'dashboard'  # Direct route for dashboard
+  get 'dashboard', to: 'dashboard#index', as: 'dashboard'# Direct route for dashboard
 
   # Public pages (home, about, menu, contact)
   root to: 'pages#home'

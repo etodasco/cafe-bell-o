@@ -2,7 +2,7 @@ class DashboardController < ApplicationController
   before_action :authenticate_user!
   before_action :ensure_admin_role
 
-  def home
+  def index
     @menu_items = MenuItem.all
     @menu_item = MenuItem.new
     @users = User.all

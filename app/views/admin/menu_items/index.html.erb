@@ -1,0 +1,27 @@
+<div class="admin-page">
+  <div class="admin-dashboard">
+    <div class="admin-header">
+      <h1>Éléments de Menu</h1>
+      <%= link_to '➕ Ajouter un Élément', new_menu_item_path, class: 'add-button' %>
+    </div>
+
+    <div class="menu-grid">
+      <% @menu_items.each do |item| %>
+        <div class="menu-card">
+          <div class="menu-info">
+            <span class="category"><%= item.category %></span>
+            <h2><%= item.name %></h2>
+            <p><%= item.description %></p>
+            <span class="day"><%= item.day %></span>
+            <span class="price">$<%= '%.2f' % item.price %></span>
+          </div>
+          <div class="menu-actions">
+            <%= link_to '👁️ Voir', menu_item_path(item), class: 'action-button view' %>
+            <%= link_to '✏️ Modifier', edit_menu_item_path(item), class: 'action-button edit' %>
+            <%= link_to '🗑️ Supprimer', menu_item_path(item), method: :delete, data: { confirm: 'Supprimer cet élément ?' }, class: 'action-button delete' %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
