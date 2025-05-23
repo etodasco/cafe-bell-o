@@ -62,6 +62,19 @@
   .navbar-background-color {
     background-color: white !important;
   }
+
+  @media (max-width: 1200px) {
+    .nav-item {
+      display: flex;
+      justify-content: center; /* center horizontally */
+    }
+  
+    /* If the button/link inside nav-item needs block display to center properly */
+    .nav-item .nav-link {
+      display: inline-block; /* or block */
+      text-align: center;
+    }
+  }
   
 /* Banner Image */
 .banner {
