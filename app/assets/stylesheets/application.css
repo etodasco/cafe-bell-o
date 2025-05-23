@@ -847,6 +847,16 @@
   background-color: white;
 }
 
+@media (max-width: 575px) {
+  .admin-page .admin-dashboard .menu-grid {
+    grid-template-columns: 1fr; /* single column */
+    justify-content: center;   /* center grid items */
+    max-width: 320px;          /* fix the max width to the card width */
+    margin: 0 auto;            /* center the grid container itself */
+    padding: 1rem;             /* optional, reduce padding on small screens */
+  }
+}
+
 .admin-page .admin-dashboard .menu-card {
   background: #fff;
   border-radius: 8px;
