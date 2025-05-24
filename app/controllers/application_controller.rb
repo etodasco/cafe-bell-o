@@ -30,14 +30,14 @@ class ApplicationController < ActionController::Base
   def check_admin_user
     if user_signed_in? && !current_user.admin?
       sign_out current_user
-      redirect_to root_path, alert: "Only the admin can sign in."
+      redirect_to root_path, alert: "Seul l'administrateur peut se connecter."
     end
   end
 
   # Restrict sign-up to only admins
   def restrict_signup_for_non_admins
     if User.exists?(admin: true)
-      redirect_to root_path, alert: "Only the admin can create an account."
+      redirect_to root_path, alert: "Seul l'administrateur peut créer un compte."
     end
   end
 

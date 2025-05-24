@@ -20,9 +20,9 @@ class MenuItemsController < ApplicationController
     @menu_item = MenuItem.new(menu_item_params)
 
     if @menu_item.save
-      redirect_to menu_items_path, notice: "Menu item added successfully."
+      redirect_to menu_items_path, notice: "Élément de menu ajouté avec succès."
     else
-      render 'admin/menu_items/new', alert: "There was an error adding the menu item."
+      render 'admin/menu_items/new', alert: "Une erreur est survenue lors de l'ajout de l'élément de menu."
     end
   end
 
@@ -32,15 +32,15 @@ class MenuItemsController < ApplicationController
 
   def update
     if @menu_item.update(menu_item_params)
-      redirect_to menu_items_path, notice: "Menu item updated successfully."
+      redirect_to menu_items_path, notice: "Élément de menu mis à jour avec succès."
     else
-      render 'admin/menu_items/edit', alert: "There was an error updating the menu item."
+      render 'admin/menu_items/edit', alert: "Une erreur est survenue lors de la mise à jour de l'élément de menu."
     end
   end
 
   def destroy
     @menu_item.destroy
-    redirect_to menu_items_path, notice: "Menu item deleted successfully."
+    redirect_to menu_items_path, notice: "Élément de menu supprimé avec succès."
   end
 
   private

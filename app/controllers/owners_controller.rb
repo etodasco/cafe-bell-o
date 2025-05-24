@@ -11,9 +11,9 @@ class OwnersController < ApplicationController
     @menu_item = MenuItem.new(menu_item_params)  # Create a new menu item with user input
 
     if @menu_item.save
-      redirect_to owner_dashboard_path, notice: "Menu item added successfully."
+      redirect_to owner_dashboard_path, notice: "L'élément de menu a été ajouté avec succès."
     else
-      redirect_to owner_dashboard_path, alert: "There was an error adding the menu item."
+      redirect_to owner_dashboard_path, alert: "Une erreur est survenue lors de l'ajout de l'élément de menu."
     end
   end
 
@@ -21,9 +21,9 @@ class OwnersController < ApplicationController
     @menu_item = MenuItem.find(params[:id])  # Find the menu item to delete
 
     if @menu_item.destroy
-      redirect_to owner_dashboard_path, notice: "Menu item deleted successfully."
+      redirect_to owner_dashboard_path, notice: "L'élément de menu a été supprimé avec succès."
     else
-      redirect_to owner_dashboard_path, alert: "There was an error deleting the menu item."
+      redirect_to owner_dashboard_path, alert: "Une erreur est survenue lors de la suppression de l'élément de menu."
     end
   end
 
@@ -31,7 +31,7 @@ class OwnersController < ApplicationController
 
   def ensure_admin_or_owner_role
     unless current_user.role == "admin" || current_user.role == "owner"
-      redirect_to root_path, alert: "Only admins or owners can access this page."
+      redirect_to root_path, alert: "Seuls les administrateurs ou les propriétaires peuvent accéder à cette page."
     end
   end
 
